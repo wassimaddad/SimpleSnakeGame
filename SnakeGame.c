@@ -11,6 +11,7 @@
 
 
 typedef struct node{
+	int data;
 	int x;
 	int y;
 	struct node *next;
@@ -259,10 +260,11 @@ void SnakeGame(int speed,int fens){
 
 // Snakegame menuu: 
 
-void snakeModsMenu(){
+int main(){
     int mod;
 
     system("cls");
+    system("color F");
     printf("=====================================\n");
     printf("            SNAKE GAME MODS          \n");
     printf("=====================================\n");
@@ -290,41 +292,8 @@ void snakeModsMenu(){
 }
 
 
-// maiin menu w main function :
 
-int main(){
-    int choice;
 
-    system("cls");
-    printf("=====================================\n");
-    printf("             GAME LIBRARY            \n");
-    printf("=====================================\n");
-    printf("  [1] Snake Game\n");
-    printf("  [2] Add a New game\n");
-    printf("  [3] Add a New game\n");
-    printf("  [0] Exit\n");
-    printf("=====================================\n");
-
-    do {
-        printf("Choose an option: ");
-        scanf("%d", &choice);
-    } while (choice < 0 || choice > 3);
-
-    switch(choice){
-        case 1:
-            snakeModsMenu();  
-            break;
-        case 2:
-            printf("coming soon...\n");
-            break;
-        case 3:
-            printf("coming soon...\n");
-            break;
-        case 0:
-            printf("Goodbye!\n");
-            exit(0);
-    }
-}
 
 
 
